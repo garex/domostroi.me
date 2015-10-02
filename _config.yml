@@ -1,0 +1,12 @@
+collections:
+  - instructions
+
+title: "Домострой"
+description: "Книга, называемая Домостроем, которая содержит в себе полезные сведения, поучение и наставление всякому христианину — и мужу, и жене, и детям, и слугам, и служанкам"
+
+gems:
+  - jekyll-seo-tag
+
+markdown: kramdown
+
+url: http://domostroi.me

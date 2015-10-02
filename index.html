@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% for instruction in site.instructions %}
+{% cycle '<div class="row">', '' %}<article class="post post-{{ forloop.index }} col-md-6">
+  <header class="entry-header">
+		<h2 class="entry-title">
+			{{ forloop.index }}. {{ instruction.title }}
+		</h2>
+	</header>
+
+  <div class="entry-content clearfix">
+    {{ instruction.content }}
+  </div>
+</article>{% cycle '', '</div>' %}
+{% endfor %}
