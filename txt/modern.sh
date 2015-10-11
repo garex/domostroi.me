@@ -8,3 +8,7 @@ cat source.md | sed -f replace.script | cat > modern.md
 # cat modern.md | egrep -o '\b[А-Яа-я]+\b' | sort | uniq -c | sort -hr | head -n100
 
 # http://new.gramota.ru/spravka/letters/69-ko-dnu с vs со
+
+# http://ksana-k.ru/?p=2744
+# lib.pushkinskijdom.ru/Default.aspx?tabid=5145
+
