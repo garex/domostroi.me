@@ -2,7 +2,7 @@
 layout: default
 ---
 {% for instruction in site.instructions %}
-{% cycle '<div class="row">', '' %}<article class="post post-{{ forloop.index }} col-md-6">
+{% cycle '<div class="row">', '' %}<article class="post col-md-6"  id="instruction-{{ forloop.index }}">
   <header class="entry-header">
 		<h2 class="entry-title">
 			{{ forloop.index }}. {{ instruction.title }}
