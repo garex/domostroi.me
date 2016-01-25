@@ -285,6 +285,10 @@ span[class^="num"] {
     font-size: 2.4em;
 }
 
+.article-header h1:first-letter {
+  font-size: 130%;
+}
+
 .article p {
     margin-bottom: 1em;
     font-family:  Georgia, "Times New Roman", Times, serif;
