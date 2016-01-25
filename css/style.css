@@ -186,10 +186,10 @@ body {
     display: inline-block;
     position: absolute;
     left: 50%;
-    top: -16px;
-    margin-left: -49px;
-    width: 98px;
-    height: 40px;
+    top: 0;
+    margin-left: -142px;
+    width: 284px;
+    height: 11px;
     background: url("../img/between-top.png");
 }
 
