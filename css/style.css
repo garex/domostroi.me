@@ -186,7 +186,7 @@ body {
     display: inline-block;
     position: absolute;
     left: 50%;
-    top: 0;
+    top: -16px;
     margin-left: -49px;
     width: 98px;
     height: 40px;
@@ -194,24 +194,28 @@ body {
 }
 
 .number {
-    width: 100%;
-    position: relative;
-}
-
-.line {
     display: inline-block;
-    width: 400px;
-    height: 68px;
-    background: #fffae7 url("../img/line.png") center bottom no-repeat;
-    background-size: contain;
+    margin-top: 20px;
 }
 
-span[class^="num"] {
-    background-repeat: no-repeat;
+.page-odd .number {
+  float: left;
+  margin-right: 10px;
+}
+.page-even .number {
+  float: right;
+  margin-left: 10px;
+}
+
+.number img {
     margin-left: -4px;
-    display: inline-block;
-    width: 39px;
-    height: 74px;
+    width: 34px;
+    height: 64px;
+}
+
+.page-even .number img {
+  margin-left: 0px;
+  margin-right: -4px;
 }
 
 .two-pages {
@@ -227,54 +231,6 @@ span[class^="num"] {
     min-height: 1px;
     padding-right: 55px;
     padding-left: 55px;
-}
-
-.page-odd .line {
-    float: right;
-}
-
-.page-even .line {
-    float: left;
-}
-
-.num-1 {
-    background-image: url("../img/1.png");
-}
-
-.num-2 {
-    background-image: url("../img/2.png");
-}
-
-.num-3 {
-    background-image: url("../img/3.png");
-}
-
-.num-4 {
-    background-image: url("../img/4.png");
-}
-
-.num-5 {
-    background-image: url("../img/5.png");
-}
-
-.num-6 {
-    background-image: url("../img/6.png");
-}
-
-.num-7 {
-    background-image: url("../img/7.png");
-}
-
-.num-8 {
-    background-image: url("../img/8.png");
-}
-
-.num-9 {
-    background-image: url("../img/9.png");
-}
-
-.num-0 {
-    background-image: url("../img/0.png");
 }
 
 .article-header h1 {
@@ -475,20 +431,11 @@ span[class^="num"] {
         display: none;
     }
 
-    .page-odd .line,
-    .page-even .line {
+    .page-odd .number,
+    .page-even .number {
         float: none;
-        display: inline-block;
+        display: block;
         margin: 0 auto;
-    }
-
-    .line {
-        background: url("../img/line-mob2.png") center no-repeat;
-        background-size: contain;
-        width: 100%;
-        position: relative;
-        bottom: 80px;
-        right: 3px;
     }
 
     .digits {

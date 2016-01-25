@@ -4,19 +4,16 @@ layout: default
 {% for instruction in site.instructions %}
 {% cycle '<div class="content"><div class="row two-pages">', '' %}
   <div class="col-sm-6 col-xs-12 page-{% cycle 'odd', 'even' %}" id="instruction-{{ forloop.index }}">
-      <div class="page-number">
-          <div class="number clearfix">
-              <span class="digits">
-                {% assign numbers = forloop.index | downcase | split: '' %}
-                {% for number in numbers %}<span class="num-{{ number }}"></span>{% endfor %}<span class="line"></span>
-          </div>
-          <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
-              <header class="article-header">
-                  <h1 itemprop="headline">{{ instruction.title }}</h1>
-              </header>
-              {{ instruction.content }}
-          </article>
+      <div class="number">
+          {% assign numbers = forloop.index | downcase | split: '' %}
+          <span class="digits">{% for number in numbers %}<img src="/img/{{ number }}.png" />{% endfor %}</span>
       </div>
+      <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="article-header">
+              <h1 itemprop="headline">{{ instruction.title }}</h1>
+          </header>
+          {{ instruction.content }}
+      </article>
   </div>
 {% cycle '', '</div></div><hr class="hr" />' %}
 {% endfor %}
