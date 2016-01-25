@@ -2,15 +2,19 @@
 layout: default
 ---
 {% for instruction in site.instructions %}
-{% cycle '<div class="row">', '' %}<article class="post col-md-6"  id="instruction-{{ forloop.index }}">
-  <header class="entry-header">
-		<h2 class="entry-title">
-			{{ forloop.index }}. {{ instruction.title }}
-		</h2>
-	</header>
-
-  <div class="entry-content clearfix">
-    {{ instruction.content }}
+{% cycle '<div class="content"><div class="row two-pages">', '' %}
+  <div class="col-sm-6 col-xs-12 page-{% cycle 'odd', 'even' %}" id="instruction-{{ forloop.index }}">
+      <div class="page-number">
+          <div class="number clearfix">
+              <span class="digits"><span class="num-1"></span></span><span class="line"></span>
+          </div>
+          <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+              <header class="article-header">
+                  <h1 itemprop="headline">{{ instruction.title }}</h1>
+              </header>
+              {{ instruction.content }}
+          </article>
+      </div>
   </div>
-</article>{% cycle '', '</div>' %}
+{% cycle '', '</div></div><hr class="hr" />' %}
 {% endfor %}
