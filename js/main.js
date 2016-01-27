@@ -17,7 +17,7 @@ $(window).load(function() {
 =========================================================
 */
 $(function () {
-    $('.article a').tooltip({
+    $('.article a[title]').tooltip({
       placement: 'bottom'
     })
 });

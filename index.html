@@ -2,6 +2,7 @@
 layout: default
 ---
 {% for instruction in site.instructions %}
+<a name="{{ forloop.index }}"></a>
 {% cycle '<div class="content"><div class="row two-pages">', '' %}
   <div class="col-sm-6 col-xs-12 page-{% cycle 'odd', 'even' %}" id="instruction-{{ forloop.index }}">
       <div class="number">
