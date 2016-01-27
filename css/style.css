@@ -255,6 +255,13 @@ body {
     margin-bottom: 1em;
 }
 
+.article blockquote {
+  font-size: 17px;
+  font-style: italic;
+  border-left-color: #BFBD40;
+  background: white;
+}
+
 .article a {
     color: #b22a2c;
     text-decoration: none;
